@@ -11,7 +11,9 @@
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook",
     "chromatic": "npx chromatic --project-token=42f62c9bf2f4",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +49,7 @@
     "@types/jasmine": "~4.0.0",
     "babel-loader": "^8.2.5",
     "chromatic": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "jasmine-core": "~4.1.0",
     "jest": "^27.5.1",
     "karma": "~6.3.0",
